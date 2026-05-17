@@ -6,7 +6,7 @@ pipeline {
   }
 
   environment {
-    IMAGE_REPO = "${env.DOCKERHUB_USERNAME ?: 'your-dockerhub-username'}/house-price-api"
+    IMAGE_REPO = "${env.DOCKERHUB_USERNAME ?: 'ankitkarwasra'}/house-price-api"
     IMAGE_TAG = "${env.BUILD_NUMBER}"
     IMAGE_NAME = "${env.IMAGE_REPO}:${env.IMAGE_TAG}"
     LATEST_IMAGE = "${env.IMAGE_REPO}:latest"
