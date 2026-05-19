@@ -226,7 +226,7 @@ pipeline {
             -H 'Content-Type: application/json' \
             -d '{"MedInc":8.3252,"HouseAge":41.0,"AveRooms":6.984127,"AveBedrms":1.02381,"Population":322.0,"AveOccup":2.555556,"Latitude":37.88,"Longitude":-122.23}'
 
-          kubectl logs deployment/house-price-api --tail=100 | grep '"event":"prediction"'
+          kubectl logs -l app=house-price-api --tail=200 --prefix=true | grep '"event":"prediction"'
         '''
       }
     }
